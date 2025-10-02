@@ -48,3 +48,7 @@ docker-compose.override.yml
 
 # 🚀 Manter o build de produção
 !public/build
+
+# Garantir que o build do Vite seja versionado
+!public/build/
+!public/build/**
