@@ -1,26 +1,32 @@
-/.phpunit.cache
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-/storage/pail
+# Laravel padrão
 /vendor
-/.env
-.env.backup
-.env.production
-.phpactor.json
-.phpunit.result.cache
+/node_modules
+/.idea
+/.vscode
+/.phpunit.result.cache
 Homestead.json
 Homestead.yaml
-npm-debug.log
-yarn-error.log
-/auth.json
-/.fleet
-/.idea
-/.nova
-/.vscode
-/.zed
-/storage/debugbar
-/storage/framework/cache
-/storage/framework/sessions
-/storage/framework/views
+.env
+.env.backup
+.env.*.local
+/.DS_Store
+Thumbs.db
+
+# Cache e logs
+/storage/*.key
+/storage/framework/*
+/storage/logs/*
+/bootstrap/cache/*
+
+# Ignorar lock do Sail e Pint
+docker-compose.override.yml
+.php-cs-fixer.cache
+.phpstorm.meta.php
+
+# Ignorar build de dev do Vite
+/public/hot
+/public/storage
+/public/mix-manifest.json
+
+# Mas garantir que o build de produção do Vite seja versionado
+!public/build
