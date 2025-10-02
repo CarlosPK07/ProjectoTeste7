@@ -1,32 +1,50 @@
-# Laravel padrão
+# ===========================
+#   LARAVEL / RAILWAY / VITE
+# ===========================
+
+# Dependências
 /vendor
 /node_modules
-/.idea
-/.vscode
-/.phpunit.result.cache
-Homestead.json
-Homestead.yaml
+
+# Arquivos de ambiente
 .env
-.env.backup
-.env.*.local
-/.DS_Store
-Thumbs.db
+.env.*
+!.env.example
 
-# Cache e logs
-/storage/*.key
-/storage/framework/*
-/storage/logs/*
-/bootstrap/cache/*
-
-# Ignorar lock do Sail e Pint
-docker-compose.override.yml
+# Cache do PHP / Laravel
+/.phpunit.result.cache
+.phpunit.cache
+.phpactor.json
 .php-cs-fixer.cache
 .phpstorm.meta.php
 
-# Ignorar build de dev do Vite
+# Storage e logs (não versionar)
+storage/*.key
+storage/debugbar
+storage/framework/*
+storage/logs/*
+bootstrap/cache/*
+
+# Configurações locais do dev
+Homestead.json
+Homestead.yaml
+/.idea
+/.vscode
+/.zed
+/.fleet
+/.nova
+/.DS_Store
+Thumbs.db
+npm-debug.log
+yarn-error.log
+
+# Arquivos do Sail / Docker
+docker-compose.override.yml
+
+# Arquivos do Vite
 /public/hot
 /public/storage
 /public/mix-manifest.json
 
-# Mas garantir que o build de produção do Vite seja versionado
+# 🚀 Manter o build de produção
 !public/build
